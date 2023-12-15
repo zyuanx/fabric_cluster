@@ -14,6 +14,7 @@ services:
       - ../crypto-config/ordererOrganizations/consortiums.com/orderers/orderer0.consortiums.com/tls/:/var/hyperledger/orderer/tls
     ports: # 定义宿主机端和容器中端口的映射关系
       - 7050:7050
+      - 7053:7053
   orderer1.consortiums.com:
     container_name: orderer1.consortiums.com
     extends:
@@ -24,6 +25,7 @@ services:
       - ../crypto-config/ordererOrganizations/consortiums.com/orderers/orderer1.consortiums.com/tls/:/var/hyperledger/orderer/tls
     ports:
       - 8050:7050
+      - 8053:7053
   orderer2.consortiums.com:
     container_name: orderer2.consortiums.com
     extends:
@@ -34,6 +36,7 @@ services:
       - ../crypto-config/ordererOrganizations/consortiums.com/orderers/orderer2.consortiums.com/tls/:/var/hyperledger/orderer/tls
     ports:
       - 9050:7050
+      - 9053:7053
   orderer3.consortiums.com:
     container_name: orderer3.consortiums.com
     extends:
@@ -44,6 +47,7 @@ services:
       - ../crypto-config/ordererOrganizations/consortiums.com/orderers/orderer3.consortiums.com/tls/:/var/hyperledger/orderer/tls
     ports:
       - 10050:7050
+      - 10053:7053
   orderer4.consortiums.com:
     container_name: orderer4.consortiums.com
     extends:
@@ -54,6 +58,7 @@ services:
       - ../crypto-config/ordererOrganizations/consortiums.com/orderers/orderer4.consortiums.com/tls/:/var/hyperledger/orderer/tls
     ports:
       - 11050:7050
+      - 11053:7053
 
   peer0.org1.com:
     container_name: peer0.org1.com
@@ -74,6 +79,7 @@ services:
       - ../crypto-config/peerOrganizations/org1.com/peers/peer0.org1.com/tls:/etc/hyperledger/fabric/tls
     ports:
       - 7051:7051
+      - 7052:7052
   peer1.org1.com:
     container_name: peer1.org1.com
     extends:
@@ -93,6 +99,7 @@ services:
       - ../crypto-config/peerOrganizations/org1.com/peers/peer1.org1.com/tls:/etc/hyperledger/fabric/tls
     ports:
       - 8051:8051
+      - 8052:8052
 
   peer0.org2.com:
     container_name: peer0.org2.com
@@ -113,6 +120,7 @@ services:
       - ../crypto-config/peerOrganizations/org2.com/peers/peer0.org2.com/tls:/etc/hyperledger/fabric/tls
     ports:
       - 9051:9051
+      - 9052:9052
 
   peer1.org2.com:
     container_name: peer1.org2.com
@@ -133,6 +141,7 @@ services:
       - ../crypto-config/peerOrganizations/org2.com/peers/peer1.org2.com/tls:/etc/hyperledger/fabric/tls
     ports:
       - 10051:10051
+      - 10052:10052
 
   cli-peer0-org1:
     container_name: cli-peer0-org1
